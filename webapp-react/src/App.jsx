@@ -4,14 +4,16 @@ import DefaultLayout from './layout/DefaultLayout'
 import HomeAndFilmList from './pages/HomeAndFilmList'
 import MovieDetail from './pages/MovieDetail'
 
+// Ricorda di importare Bootstrap
+
 function App() {
 
   return (
     <BrowserRouter>
-      <Routes to="/">
-        <Route Component={DefaultLayout}>
-          <Route to='homeandlist' Component={HomeAndFilmList} />
-          <Route to='homeandlist/:id' Component={MovieDetail} />
+      <Routes>
+        <Route path="/" Component={DefaultLayout}>
+          <Route path='/' Component={HomeAndFilmList} />
+          <Route path='/:id' Component={MovieDetail} />
         </Route>
       </Routes>
     </BrowserRouter>

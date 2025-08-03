@@ -12,9 +12,9 @@ Installiamo il necessario: React Router, Bootstrap (se volete utilizzarlo)
 - Home, lista dei film
 - Pagina FilmDetail
 
-### MILESTONE 3
+### MILESTONE 3 ✅
 Configuriamo webapp-express installando e impostando CORS
-effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei libri
+effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei film
 
 ### MILESTONE 4
 In ultimo, effettuiamo una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni
