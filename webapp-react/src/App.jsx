@@ -3,20 +3,23 @@ import './App.css'
 import DefaultLayout from './layout/DefaultLayout'
 import HomeAndFilmList from './pages/HomeAndFilmList'
 import MovieDetail from './pages/MovieDetail'
-
-// Ricorda di importare Bootstrap
+import { MoviesProvider } from './contexts/MoviesContext'
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" Component={DefaultLayout}>
-          <Route path='/' Component={HomeAndFilmList} />
-          <Route path='/:id' Component={MovieDetail} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+
+    <MoviesProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route Component={DefaultLayout}>
+            <Route path='/' Component={HomeAndFilmList} />
+
+            <Route path='/:id' Component={MovieDetail} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </MoviesProvider>
   )
 }
 
