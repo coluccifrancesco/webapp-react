@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const MoviesContext = createContext();
 
@@ -10,7 +11,7 @@ export function MoviesProvider ({children}){
         return fetch('http://localhost:3070/api/movies/')
         .then(res => res.json())
         .then(data => {
-            console.log(data); setMovies(data)
+             setMovies(data)
         })
     }
 
@@ -28,25 +29,36 @@ export function useMovies(){
     return context
 }
 
-export function SingleMovieProvider ({children}){
+// Lascio commentata questa sezione in caso di imprevisti/monito
+
+// const MovieAndRevContext = createContext();
+
+// export function MovieAndRevProvider ({children}){
     
-    const [movie, setMovie] = useState([])
-    const id = req.params.value;
+//     const [movie, setMovie] = useState([])
+//     const params = useParams()
+//     console.log(params);
+//     const { id } = params
+//     console.log(id);
 
-    function fetchFilm(){
-        return fetch(`http://localhost:3070/api/movies/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data); setMovies(data)
-        })
-    }
+//     function fetchFilm(){
+//         return fetch(`http://localhost:3070/api/movies/${id}`)
+//         .then(res => res.json())
+//         .then(data => {
+//             console.log(data); setMovie(data)
+//         })
+//     }
 
-    useEffect(() => {fetchFilm()}, []);
+//     useEffect(() => {fetchFilm()}, []);
 
 
-    return <MoviesContext.Provider value={{movie}}>
-        {children}
-    </MoviesContext.Provider>
+//     return <MovieAndRevContext.Provider value={{movie}}>
+//         {children}
+//     </MovieAndRevContext.Provider>
     
-}
+// }
 
+// export function useMovie(){
+//     const context = useContext(MovieAndRevContext);
+//     return context
+// }

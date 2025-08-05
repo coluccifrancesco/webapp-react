@@ -1,5 +1,5 @@
 :root{
-  --bg-color: #050709;
+  --bg-color: rgb(5, 7, 9);
   --primary-color: #a8bbd0;
   --secondary-color: #385371;
   --accent-color: #5782b1;
@@ -59,7 +59,7 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-  filter: blur(11px);
+  filter: blur(10px);
 }
 
 .main-detail{
@@ -118,6 +118,71 @@
 .container-buttons{
   width: 100%;
   padding: 0 40px;
+}
+
+.reviews-container{
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 30px;
+
+  h2{
+    font-family: 'Fugaz One', sans-serif;
+    color: var(--text-color);
+    font-size: 30px;
+  }
+
+  .col-12{
+    padding: 5px 20px;
+  }
+}
+
+.rev-card{
+  background-color: var(--accent-color);
+  border: 6px solid var(--usually-white);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--text-color);
+  transition: 0.25s;
+
+  &:hover{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .rev-title{
+    width: 10px;
+    font-size: 25px;
+    font-family: 'Racing Sans One', sans-serif;
+    margin-bottom: 0;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover{
+      color: var(--secondary-color);
+    }
+
+    &:active{
+      color: transparent;
+    }
+  }
+
+  .propic-cont{
+    background-color: var(--primary-color);
+    border: 5px solid var(--text-color);
+    border-radius: 50%;
+    padding: 13px 10px;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover{
+      border: 5px solid var(--secondary-color);
+      background-color: var(--secondary-color);
+    }
+
+    .rev-propic{
+      font-size: 40px;
+    }
+  }
 }
 
 footer{

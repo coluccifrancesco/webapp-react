@@ -12,16 +12,19 @@ function App() {
   return (
 
     <MoviesProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route Component={DefaultLayout}>
-            <Route path='/' Component={HomePage} />
-            <Route path='/movies' Component={FilmList} />
+      {/* <MovieAndRevProvider> */}
+        <BrowserRouter>
+          <Routes>
+            <Route Component={DefaultLayout}>
+              <Route path='/' Component={HomePage} />
+              <Route path='/movies' Component={FilmList} />
 
-            <Route path='/movies/:id' Component={SingleFilmPage} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+
+              <Route path='/movies/:id' Component={SingleFilmPage} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      {/* </MovieAndRevProvider> */}
     </MoviesProvider>
   )
 }

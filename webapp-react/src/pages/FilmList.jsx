@@ -4,6 +4,9 @@ import FilmCard from '../components/FilmCard';
 export default function HomeAndFilmList() {
 
     const { movies } = useMovies();
+    if(movies){
+        console.log(movies);
+    }
 
     return <main className='main-home'>
 
