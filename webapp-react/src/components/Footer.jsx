@@ -1,6 +1,6 @@
 export default function Footer() {
     return <footer>
-        <nav className="p-5 bg-black text-light container-fluid d-flex justify-content-center align-items-center flex-column">
+        <nav className="text-light container-fluid d-flex justify-content-center align-items-center flex-column">
             <div className="row g-3 p-3">
                 <div className="col col-12 col-sm-4">
                     <ul className="list-unstyled mx-auto">

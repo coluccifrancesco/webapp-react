@@ -1,18 +1,125 @@
+:root{
+  --bg-color: #050709;
+  --primary-color: #a8bbd0;
+  --secondary-color: #385371;
+  --accent-color: #5782b1;
+  --text-color: #e4e9ee;
+  --usually-white: white;
+  --usually-black: black;
+}
+
+.c-title{
+  font-family: 'Racing Sans One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--secondary-color);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.navbar{
+  position: fixed;
+}
+
+.nav-logo-cont{
+  color: var(--text-color);
+  font-size: 30px;
+  font-family: "Fugaz One", sans-serif;
+  transition: 0.2s;
+
+  &:hover{
+    color: var(--usually-white);
+    margin-left: 10px;
+  }
+
+  &:active{
+    color: transparent;
+  }
+}
+
+.jumbotron{
+  padding: 40px;
+  color: var(--text-color);
+}
+
+.logotype-name{
+  margin-left: 7px;
+}
+
+.logotype-logo{
+  margin-bottom: 4px;
+}
+
 .detail-bg-img{
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  -webkit-mask-image: radial-gradient(circle at 30% 40%, white 0%, white 30%, transparent 70%);
-  mask-image: radial-gradient(circle at 30% 40%, white 0%, white 30%, transparent 70%);
-  -webkit-mask-position: center;
-  mask-position: center;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(10px);
+}
+
+.main-detail{
+  padding-top: 90px;
+  background: linear-gradient(180deg,rgba(56, 83, 113, 1) 0%, rgba(168, 187, 208, 1) 100%);
+}
+
+.main-home{
+  padding: 100px 0;
+  background: linear-gradient(180deg,rgba(56, 83, 113, 1) 0%, rgba(168, 187, 208, 1) 100%);
+
+}
+
+.details-btn{
+  border: 3px solid transparent;
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: var(--secondary-color);
+  transition: 0.2s;
+
+  &:hover{
+    background-color: var(--usually-white);
+    color: var(--secondary-color);
+    border: 3px solid var(--secondary-color);
+    margin-left: 5px;
+  }
+
+  &:active{
+    color: var(--bg-color);
+    border: 3px solid var(--bg-color);
+  }
+}
+
+.discover-btn{
+  border: 3px solid transparent;
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: var(--secondary-color);
+  transition: 0.2s;
+
+  &:hover{
+    background-color: transparent;
+    color: var(--usually-white);
+    border: 3px solid var(--usually-white);
+    margin-left: 5px;
+  }
+
+  &:active{
+    color: var(--bg-color);
+    border: 3px solid var(--bg-color);
+  }
+}
+
+.container-buttons{
+  width: 100%;
+  padding: 0 40px;
+}
+
+footer{
+  background-color: var(--primary-color);
 }
