@@ -59,7 +59,7 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-  filter: blur(10px);
+  filter: blur(11px);
 }
 
 .main-detail{
