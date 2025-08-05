@@ -1,7 +1,7 @@
 export default function Footer() {
-    return <footer>
+    return <footer className="p-4">
         <nav className="text-light container-fluid d-flex justify-content-center align-items-center flex-column">
-            <div className="row g-3 p-3">
+            <div className="row g-3">
                 <div className="col col-12 col-sm-4">
                     <ul className="list-unstyled mx-auto">
                         <h3>I generi più popolari</h3>
