@@ -9,6 +9,8 @@ export default function HomeAndFilmList() {
 
     const movie = movies[id - 1];
 
+    
+
     return (movie ? <main className='main-detail'>
         <section className='position-relative'>
 
@@ -26,6 +28,7 @@ export default function HomeAndFilmList() {
             <section className=''>
 
             </section>
+        
         </section>
     </main> : 
     
