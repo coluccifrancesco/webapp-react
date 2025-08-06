@@ -17,8 +17,8 @@ export default function HomeAndFilmList() {
         return fetch(`http://localhost:3070/api/movies/${id}`)
             .then(res => res.json())
             .then(data => {
-            setMovie(data)
-        })
+                setMovie(data)
+            })
     }
 
     useEffect(() => { fetchFilm() }, []);
@@ -62,14 +62,45 @@ export default function HomeAndFilmList() {
                 })}
             </div>
         </section>
-    
-    </main> 
-    
-    :
 
-    <div className='d-flex justify-content-center align-items-center mt-5'>
-        <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-        </div>
-    </div>)
+        
+        {/* Form per lasciare una recensione DA REFATTORIZZARE */}
+        <section className='form-review'>
+            <h2>Share your opinion on the film!</h2>
+
+            <form className='container'>
+                <div className="mb-3">
+                    <label htmlFor="name-input" className="form-label">Name</label>
+                    <input type="email" className="form-control" id="name-input" aria-describedby="emailHelp" />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="input-review" className="form-label">Your review</label>
+                    <input type="text" className="form-control" id="input-review" />
+                </div>
+                <div className="mb-3">
+                    
+                    <label className="form-label" htmlFor="vote-input">Your vote</label>
+                    
+                    <div className='d-flex justify-content-between align-items-center'>
+
+                        <div>
+                            <input type="number" className="vote-input form-control" id="vote-input" min="1" max="5" />
+                        </div>
+                    
+                        <button type="submit" className="submit-btn">Submit</button>
+                    
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+        :
+
+        <div className='d-flex justify-content-center align-items-center mt-5'>
+            <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div>)
 }

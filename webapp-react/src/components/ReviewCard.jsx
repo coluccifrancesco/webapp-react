@@ -8,7 +8,7 @@ export default function ReviewCard({rev}) {
 
                 <div className="rev-card-body">
                     <p><span className="rev-pre">Review:</span> <span className="review">'{rev.text}'</span></p>
-                    <p className='mb-0'>Vote : <span className="vote">{rev.vote} / 5 <i class="fa-solid fa-star vote-star"></i></span></p>
+                    <p className='mb-0'>Vote : <span className="vote">{rev.vote} / 5 <i className="fa-solid fa-star vote-star"></i></span></p>
                 </div>
             </div>
             

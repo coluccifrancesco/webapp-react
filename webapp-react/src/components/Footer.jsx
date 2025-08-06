@@ -1,5 +1,5 @@
 export default function Footer() {
-    return <footer className="p-4">
+    return <footer className="p-5">
         <nav className="text-light container-fluid d-flex justify-content-center align-items-center flex-column">
             <div className="row g-3">
                 <div className="col col-12 col-sm-4">
