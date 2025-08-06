@@ -5,9 +5,11 @@ export default function ReviewCard({rev}) {
                 <div>
                     <h5 className="rev-title">{rev.name}</h5>
                 </div>
-                <div className="card-body">
-                    <p className="card-title">Review: <span>'{rev.text}'</span></p>
-                    <p className='mb-0'>Vote : <span>{rev.vote} / 5</span></p>
+
+                {/* Finire estetica card */}
+                <div className="rev-card-body">
+                    <p><span className="rev-pre">Review:</span> <span className="review">'{rev.text}'</span></p>
+                    <p className='mb-0'>Vote : <span className="vote">{rev.vote} / 5 <i class="fa-solid fa-star vote-star"></i></span></p>
                 </div>
             </div>
             

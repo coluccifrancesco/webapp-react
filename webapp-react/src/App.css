@@ -6,6 +6,7 @@
   --text-color: #e4e9ee;
   --usually-white: white;
   --usually-black: black;
+  --vote-color: rgb(255, 196, 0);
 }
 
 .c-title{
@@ -19,6 +20,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
+  min-width: 475px;
 }
 
 .navbar{
@@ -128,6 +133,7 @@
   h2{
     font-family: 'Fugaz One', sans-serif;
     color: var(--text-color);
+    margin: 20px auto;
     font-size: 30px;
   }
 
@@ -153,7 +159,7 @@
     width: 10px;
     font-size: 25px;
     font-family: 'Racing Sans One', sans-serif;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     transition: 0.2s;
     cursor: pointer;
 
@@ -173,6 +179,7 @@
     padding: 13px 10px;
     transition: 0.2s;
     cursor: pointer;
+    margin-left: 15px;
 
     &:hover{
       border: 5px solid var(--secondary-color);
@@ -183,6 +190,23 @@
       font-size: 40px;
     }
   }
+}
+
+.rev-card-body{
+
+  .rev-pre{
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .review{
+    font-style: italic;
+  }
+
+  .vote{
+    color: var(--vote-color);
+  }
+
 }
 
 footer{
